@@ -20,8 +20,8 @@ const ContactPage = () => {
               <h1>Get in Touch</h1>
               <p>
                 Interested in starting a project together or have a
-                collaboration in mind? Fill out the form and let's bring your
-                ideas to life!
+                collaboration in mind? Fill out the form and {`let's `}bring
+                your ideas to life!
               </p>
               <ul>
                 <li>
