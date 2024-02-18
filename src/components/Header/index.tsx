@@ -14,13 +14,16 @@ export const Header = () => {
         <i className="fa-solid fa-bars"></i>
       </div>
       <div
-        className={
-          open
-            ? `${styles.sidebar} ${styles.animateIn}`
-            : `${styles.sidebar} ${styles.animateOut}`
-        }
+        style={{ top: open ? "0" : "-100%" }}
+        className={`${styles.sidebar}`}
       >
-        <div className={styles.sideContent}>
+        <div
+          style={{
+            opacity: open ? "1" : "0",
+            transform: open ? "scale(1)" : "scale(0.4)",
+          }}
+          className={styles.sideContent}
+        >
           <div onClick={() => setAnim(false)} className={styles.close}>
             <span>&times;</span>
           </div>

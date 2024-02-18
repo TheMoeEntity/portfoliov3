@@ -4,13 +4,12 @@
 .sidebar {
   width: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
+  right: 0%;
+  top: -100%;
   z-index: 3;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.31);
-  transform: scale(0.8);
-  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.41);
+  transition: 0.6s;
 }
 .sideContent {
   width: 400px;
@@ -22,7 +21,10 @@
   background-color: white;
   z-index: 4;
   padding: 30px 20px;
+  transform: scale(0.4);
   padding-top: 60px;
+  opacity: 0;
+  transition: 0.6s;
 }
 .close {
   position: absolute;
@@ -47,24 +49,30 @@
   color: black;
 }
 .sidebar.animateIn {
-  animation-name: animateIn;
-  animation-fill-mode: forwards;
-  animation-duration: 0.7s;
+  opacity: 1;
+  transform: scale(1);
 }
 .sidebar.animateOut {
-  animation-name: animateOut;
-  animation-fill-mode: forwards;
-  animation-duration: 0.7s;
+  opacity: 0;
+  transform: scale(0.4);
 }
 @keyframes animateIn {
   0% {
-    transform: scale(0.8);
+    transform: scale(0.5);
     opacity: 0;
+    top: -100%;
     visibility: hidden;
+  }
+  80% {
+    transform: scale(0.95);
+    opacity: 0;
+    right: 0%;
+    visibility: visible;
   }
   100% {
     transform: scale(1);
     opacity: 1;
+    right: 0%;
     visibility: visible;
   }
 }
@@ -72,13 +80,17 @@
   0% {
     transform: scale(1);
     opacity: 1;
+    right: 0%;
+    visibility: visible;
   }
   95% {
-    transform: scale(0.8);
+    transform: scale(0.5);
   }
   100% {
-    transform: scale(0.8);
+    transform: scale(0.5);
     opacity: 0;
+    right: -100%;
+    visibility: hidden;
   }
 }
 .logo {
@@ -194,7 +206,7 @@
 .services section {
   display: flex;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 40px;
   flex-flow: row wrap;
   padding: 20px;
 }
@@ -277,12 +289,35 @@
 .details > div {
   display: block;
   margin: 30px auto;
-  width: 500px;
+  width: 600px;
   max-width: 100%;
   padding: 0 20px;
   font-size: small;
   line-height: 1.8;
   color: #929292;
+}
+.projectInfo {
+  margin-top: 40px;
+  width: 100%;
+  height: fit-content;
+  background-color: white;
+  padding: 20px 20px;
+  color: #929292;
+  font-size: medium;
+  box-shadow: 0px 2px 7px -4px rgba(0, 0, 0, 0.21);
+}
+.projectInfo h2 {
+  color: black;
+  text-align: center;
+  padding: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+}
+.projectInfo ul li {
+  list-style-type: none;
+}
+
+.projectInfo ul li b {
+  font-weight: bolder;
 }
 .details a {
   color: black;

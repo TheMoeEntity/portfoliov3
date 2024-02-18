@@ -50,46 +50,7 @@ export const useScrollTop = () => {
   };
   return { scrollTop, scrollBtn, pathname };
 };
-export const useLinks = () => {
-  const router = useRouter();
-  const [links, setLinks] = useState<linkType[]>(Helpers.links);
-  const pathname = usePathname();
-  useEffect(() => {
-    console.log(pathname.slice(1, pathname.length));
-    setLinks((currLink) => {
-      const newLink = currLink.map((x) =>
-        x.href === pathname.slice(1, pathname.length)
-          ? {
-              ...x,
-              isActive: true,
-            }
-          : {
-              ...x,
-              isActive: false,
-            }
-      );
-      return newLink;
-    });
-  }, [pathname]);
-  const LinkAction = (page: string) => {
-    setLinks((currLink) => {
-      const newLink = currLink.map((x) =>
-        x.href === page
-          ? {
-              ...x,
-              isActive: true,
-            }
-          : {
-              ...x,
-              isActive: false,
-            }
-      );
-      return newLink;
-    });
-    router.push(`/${page}`);
-  };
-  return { links, LinkAction };
-};
+
 export const useStickyNav = (isStickyClass: string) => {
   const [sticky, setSticky] = useState("");
   const headerRef = useRef<HTMLDivElement | null>(null);
@@ -143,10 +104,8 @@ export const useValidRoute = (pathname: string): boolean => {
     "/localhost:3000",
     "/contact",
     "/",
-    "/donations",
-    "https://greeencalbeta.vercel.app",
-    "/donations/[id]",
-    "/donations" + params.slice(10, params.length),
+    "/works/[id]",
+    "/works" + params.slice(6, params.length),
   ];
   const checkValid = (pathname: string): boolean => {
     return validRoutes.includes(pathname);

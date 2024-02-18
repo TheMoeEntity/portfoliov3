@@ -66,3 +66,13 @@ export type linkType = {
   isActive: boolean;
   href: string;
 };
+export type portfolioData = {
+  name: string;
+  url: string;
+  stack: string[];
+  date: string;
+  id: number;
+  images: StaticImageData[];
+  details: string[];
+  slug: string;
+};
