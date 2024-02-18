@@ -1,7 +1,8 @@
 // require("dotenv").config();
-import { Helpers } from "@/helpers";
-import { createHTMLToSend } from "@/helpers/mail";
-import { replacements } from "@/Helpers/types";
+import { Helpers } from "../../../../Helpers";
+import { createHTMLToSend } from "../../../../Helpers/mail";
+
+import { replacements } from "../../../../Helpers/types";
 import { NextRequest, NextResponse } from "next/server";
 import path from "path";
 
