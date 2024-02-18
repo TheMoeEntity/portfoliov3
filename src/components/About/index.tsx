@@ -4,13 +4,20 @@ import styles from "../../app/page.module.css";
 import profile from "../../../public/images/profile.jpg";
 import Link from "next/link";
 import TypeEffect from "./TypeEffect";
+import { useEffect, useState } from "react";
 
 const About = () => {
+  const [anim, setAnim] = useState<string>("");
+  useEffect(() => {
+    setAnim(styles.fullWidth);
+    return () => {};
+  }, []);
+
   return (
     <div id="about" className={styles.about}>
       <h1 className={styles.title}>About Me</h1>
       <section>
-        <div>
+        <div className={anim}>
           <Image
             src={profile}
             style={{
@@ -50,22 +57,46 @@ const About = () => {
               <a
                 target={`_blank`}
                 rel="noopener noreferrer"
-                href="https://instagram.com/pepnops"
+                href="https://github.com/TheMoeEntity"
               >
                 <i className="fa-brands fa-github"></i>
               </a>
             </span>
             <span>
-              <i className="fa-brands fa-instagram"></i>
+              <a
+                target={`_blank`}
+                rel="noopener noreferrer"
+                href="https://instagram.com/NC_Moses"
+              >
+                <i className="fa-brands fa-instagram"></i>
+              </a>
             </span>
             <span>
-              <i className="fa-brands fa-whatsapp"></i>
+              <a
+                target={`_blank`}
+                rel="noopener noreferrer"
+                href="https://wa.me/+2348075489362"
+              >
+                <i className="fa-brands fa-whatsapp"></i>
+              </a>
             </span>
             <span>
-              <i className="fa-brands fa-twitter"></i>
+              <a
+                target={`_blank`}
+                rel="noopener noreferrer"
+                href="https://x.com/NMoses_"
+              >
+                <i className="fa-brands fa-twitter"></i>
+              </a>
             </span>
             <span>
-              <i className="fa-brands fa-linkedin"></i>
+              <a
+                target={`_blank`}
+                rel="noopener noreferrer"
+                href="https://linkedin.com/in/moses.nwigberi"
+              >
+                <i className="fa-brands fa-linkedin"></i>
+              </a>
             </span>
           </div>
           <Link href="/contact" prefetch={true}>

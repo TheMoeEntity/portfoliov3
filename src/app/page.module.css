@@ -36,8 +36,12 @@
 }
 .about section > div:first-child {
   max-width: calc(0.35 * 1242px);
-  height: calc(0.35 * 1982px);
+  height: 1px;
   position: relative;
+  transition: height 1.2s ease-in;
+}
+.about section > div:first-child.fullWidth {
+  height: calc(0.35 * 1982px);
 }
 .about section > div {
   flex: 1 1;
@@ -278,6 +282,8 @@
   .about section > div:first-child {
     max-width: 100%;
     margin-top: 20px;
+  }
+  .about section > div:first-child.fullWidth {
     height: calc(0.25 * 1982px);
   }
   .about section > div {
