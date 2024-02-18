@@ -36,23 +36,23 @@ const Footer = () => {
                 }}
               />
               <p>
-                <a href="#!" className="text-dark">
+                <a href="#about" className="text-dark">
                   About
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-dark">
+                <a href="#services" className="text-dark">
                   Services
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-dark">
+                <a href="#projects" className="text-dark">
                   Projects
                 </a>
               </p>
               <p>
                 <a href="/contact" className="text-dark">
-                  Contact
+                  Get in touch
                 </a>
               </p>
             </div>

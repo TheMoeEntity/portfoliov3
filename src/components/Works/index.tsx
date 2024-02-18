@@ -35,7 +35,7 @@ const Works = () => {
   ];
 
   return (
-    <div className={styles.services}>
+    <div id="projects" className={styles.services}>
       <h1 className={styles.title}>Works</h1>
       <section>
         <h1>Projects I have worked on</h1>

@@ -1,10 +1,11 @@
 import Image from "next/image";
 import styles from "../../app/page.module.css";
 import profile from "../../../public/images/profile.jpg";
+import Link from "next/link";
 
 const About = () => {
   return (
-    <div className={styles.about}>
+    <div id="about" className={styles.about}>
       <h1 className={styles.title}>About Me</h1>
       <section>
         <div>
@@ -60,7 +61,9 @@ const About = () => {
               <i className="fa-brands fa-linkedin"></i>
             </span>
           </div>
-          <div className={styles.contact}>CONTACT ME!</div>
+          <Link href="/contact" prefetch={true}>
+            <div className={styles.contact}>CONTACT ME!</div>
+          </Link>
         </div>
       </section>
     </div>
