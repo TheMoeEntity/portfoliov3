@@ -32,6 +32,7 @@
   margin-top: 20px;
   flex-flow: row wrap;
   padding: 20px;
+  transition: 0.5s;
 }
 .about section > div:first-child {
   max-width: calc(0.35 * 1242px);
@@ -45,6 +46,7 @@
 .about section > div:nth-child(2) {
   padding: 20px 40px 20px 90px;
   position: relative;
+  transition: 0.5s;
 }
 .about section > div:nth-child(2) p {
   padding: 15px 30px 15px 80px;

@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import styles from "../../app/page.module.css";
 import profile from "../../../public/images/profile.jpg";
 import Link from "next/link";
+import TypeEffect from "./TypeEffect";
 
 const About = () => {
   return (
@@ -24,8 +26,7 @@ const About = () => {
         <div>
           <div className={styles.flipped}>A B O U T </div>
           <h1 className={styles.name}>
-            Moses <br />
-            Nwigberi
+            <TypeEffect />
           </h1>
           <p>
             Welcome to my realm of pixels and code! {`I'm`} Moe, a{" "}
@@ -46,7 +47,13 @@ const About = () => {
           </p>
           <div className={styles.links}>
             <span>
-              <i className="fa-brands fa-github"></i>
+              <a
+                target={`_blank`}
+                rel="noopener noreferrer"
+                href="https://instagram.com/pepnops"
+              >
+                <i className="fa-brands fa-github"></i>
+              </a>
             </span>
             <span>
               <i className="fa-brands fa-instagram"></i>

@@ -1,5 +1,4 @@
 import Typewriter from "typewriter-effect";
-import styles from "../../components/index.module.css";
 
 const TypeEffect = () => {
   return (
@@ -10,15 +9,21 @@ const TypeEffect = () => {
       onInit={(writer) => {
         writer
           .pauseFor(2500)
-          .typeString("Lives.")
+          .typeString("Moses <br  />")
           .pauseFor(2000)
-          .deleteAll()
-          .typeString("Businesses.")
+          .typeString("Nwigberi")
           .pauseFor(2000)
-          .deleteAll()
           // .deleteChars(10)
-          .typeString("Operations.")
+          .typeString(".")
           .pauseFor(2000)
+          .deleteAll()
+          .pauseFor(2000)
+          .typeString("I'm <br  />")
+          .pauseFor(2000)
+          .typeString("A ")
+          .pauseFor(2000)
+          .typeString("Web Developer.")
+          .pauseFor(6000)
           .deleteAll()
           .start();
       }}
