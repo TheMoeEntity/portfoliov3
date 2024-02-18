@@ -1,0 +1,332 @@
+.main {
+  min-height: 100vh;
+}
+.logo {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.about {
+  padding: 10px 20px;
+  position: relative;
+}
+.title {
+  text-align: center;
+  color: #f0f0f0;
+  font-size: 160px;
+  position: absolute;
+  left: 50%;
+  display: 100%;
+  top: -5%;
+  z-index: -1;
+  overflow: hidden;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+.about section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-flow: row wrap;
+  padding: 20px;
+}
+.about section > div:first-child {
+  max-width: calc(0.35 * 1242px);
+  height: calc(0.35 * 1982px);
+  position: relative;
+}
+.about section > div {
+  flex: 1 1;
+  margin: 10px 5px;
+}
+.about section > div:nth-child(2) {
+  padding: 20px 40px 20px 90px;
+  position: relative;
+}
+.about section > div:nth-child(2) p {
+  padding: 15px 30px 15px 80px;
+  font-size: small;
+  line-height: 1.8;
+  color: #929292;
+}
+.about .links {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 15px 30px 15px 80px;
+  color: #031323;
+}
+.about p span {
+  color: #031323;
+}
+.about .links span {
+  margin: 7px;
+}
+.name {
+  font-size: 45px;
+}
+.about .contact {
+  background-color: transparent;
+  border: 1px solid #929292;
+  width: fit-content;
+  padding: 7px 13px;
+  display: flex;
+  color: #929292;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin-left: 75px;
+}
+.about .flipped {
+  position: absolute;
+  left: 60px;
+  top: 40%;
+  transform: rotate(90deg);
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+.about .flipped::after {
+  position: absolute;
+  top: 12px;
+  right: -45px;
+  content: "";
+  background: #000;
+  width: 40px;
+  height: 1px;
+}
+
+/* ---------------------- SERVICES --------------------- */
+.services {
+  position: relative;
+  padding: 10px 20px;
+  margin-top: 80px;
+  width: 100%;
+  height: auto;
+}
+.services section {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  flex-flow: row wrap;
+  padding: 20px;
+}
+.services section > div:nth-child(2) {
+  max-width: calc(0.45 * 1000px);
+  height: calc(0.45 * 1481px);
+  position: relative;
+}
+.services section > div:first-child {
+  padding-left: 40px;
+}
+.services section > div {
+  margin: 10px 30px;
+  flex: 1 1;
+}
+
+.services h2 {
+  color: #f0f0f0;
+  font-size: medium;
+}
+.services section > div > h1 {
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 70px;
+}
+.skillSet {
+  margin: 60px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.skillSet > div {
+}
+.skillSet ul > li {
+  margin: 20px 40px;
+  color: #808080;
+}
+
+/* ---------------------- PROJECTS --------------------- */
+.projects {
+  width: 90%;
+  padding: 20px 40px;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 20px auto;
+}
+.projects .img .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+.projects .img .overlay .projectName {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  background-color: rgba(255, 255, 255, 0.93);
+  color: black;
+  padding: 30px 35px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 49px -4px rgba(0, 0, 0, 0.21);
+}
+.projects > div {
+  width: 100%;
+  flex: 100%;
+  margin: 80px 0;
+}
+.projects .img {
+  padding-top: 10px;
+  width: 100%;
+  position: relative;
+  height: 550px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 49px -4px rgba(0, 0, 0, 0.21);
+}
+.details > div {
+  display: block;
+  margin: 30px auto;
+  width: 500px;
+  max-width: 100%;
+  padding: 0 20px;
+  font-size: small;
+  line-height: 1.8;
+  color: #929292;
+}
+.details a {
+  color: black;
+  text-align: right;
+  margin-top: 20px;
+  display: block;
+  cursor: pointer;
+  font-weight: bolder;
+  position: relative;
+}
+.details a::before {
+  position: absolute;
+  top: 12px;
+  right: 120px;
+  content: "";
+  background: #000;
+  width: 40px;
+  height: 1px;
+}
+
+@media screen and (max-width: 490px) {
+  .title {
+    font-size: 70px;
+    left: 50%;
+    top: 0%;
+    font-weight: bolder;
+    transform: translateX(-50%);
+  }
+  .projects {
+    width: 100%;
+    padding: 20px 0px;
+  }
+  .projects .img .overlay .projectName {
+    padding: 16px 15px;
+    text-align: center;
+    font-size: small;
+  }
+
+  .projects .img {
+    height: 200px;
+  }
+  .services {
+    position: relative;
+    padding: 10px 10px;
+    margin-top: 80px;
+  }
+  .services section {
+    margin-top: 70px;
+    flex-flow: row wrap;
+    padding: 10px;
+  }
+  .services section > div:nth-child(2) {
+    max-width: 100%;
+    height: calc(0.3 * 1481px);
+    width: 100%;
+  }
+  .services section > div:first-child {
+    padding-left: 10px;
+  }
+  .services section > div {
+    margin: 10px 0px;
+    flex: 100%;
+  }
+  .skillSet ul > li {
+    margin: 20px 10px;
+    color: #808080;
+  }
+  .about {
+    padding: 10px 10px;
+    position: relative;
+  }
+
+  .about section {
+    display: flex;
+    padding: 20px 5px;
+  }
+  .about section > div:first-child {
+    max-width: 100%;
+    margin-top: 20px;
+    height: calc(0.25 * 1982px);
+  }
+  .about section > div {
+    margin: 10px 0px;
+    flex: 100%;
+  }
+  .about section > div:nth-child(2) {
+    padding: 20px 0px 20px 0px;
+    position: relative;
+    width: 100%;
+  }
+  .about section > div:nth-child(2) p {
+    padding: 15px 10px 15px 40px;
+    font-size: small;
+    line-height: 1.8;
+    color: #929292;
+  }
+  .about .links {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 15px 10px 15px 50px;
+    color: #031323;
+  }
+
+  .about .contact {
+    background-color: transparent;
+    border: 1px solid #929292;
+    width: fit-content;
+    padding: 7px 13px;
+    display: flex;
+    color: #929292;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+  }
+  .about .flipped {
+    position: absolute;
+    left: -40px;
+    top: 40%;
+    transform: rotate(90deg);
+    letter-spacing: 3px;
+    font-size: 13px;
+  }
+  .about .flipped::after {
+    position: absolute;
+    top: 12px;
+    right: -45px;
+    content: "";
+    background: #000;
+    width: 40px;
+    height: 1px;
+  }
+}
