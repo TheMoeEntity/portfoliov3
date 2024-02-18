@@ -107,6 +107,9 @@ header i {
   font-size: 24px;
   cursor: pointer;
 }
+header ul li {
+  cursor: pointer;
+}
 .scrollTop {
   width: 40px;
   height: 40px;

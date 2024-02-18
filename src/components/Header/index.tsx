@@ -1,10 +1,18 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import styles from "../../app/page.module.css";
 
 export const Header = () => {
   const [open, setAnim] = useState<boolean>(false);
+  const router = useRouter();
+  const linkAction = (link?: string): void => {
+    setAnim(false);
+    if (link) {
+      router.push(link);
+    }
+  };
   return (
     <header>
       <Link href={"/"}>
@@ -28,21 +36,13 @@ export const Header = () => {
             <span>&times;</span>
           </div>
           <ul>
-            <li>
-              <Link href="/">HOME</Link>
-            </li>
-            <li>
-              <Link href="/#services">SERVICES</Link>
-            </li>
-            <li>
-              <Link href="/#projects">WORKS</Link>
-            </li>
+            <li onClick={() => linkAction("/")}>HOME</li>
+            <li onClick={() => linkAction("/#services")}>SERVICES</li>
+            <li onClick={() => linkAction("/#projects")}>WORKS</li>
             <li>
               <Link href="/#about">ABOUT</Link>
             </li>
-            <li>
-              <Link href="/contact">CONTACT ME</Link>
-            </li>
+            <li onClick={() => linkAction("/contact")}>CONTACT ME</li>
           </ul>
         </div>
       </div>

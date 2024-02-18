@@ -2,10 +2,12 @@
 import React, { ChangeEvent, useRef, useState } from "react";
 import styles from "./index.module.css";
 import { useResize } from "@/Helpers/hooks";
+import { Helpers } from "@/Helpers";
+import { useSnackbar } from "notistack";
 
 const ContactPage = () => {
   const { val, setVal, textAreaRef } = useResize();
-
+  const { enqueueSnackbar } = useSnackbar();
   const [status, setStatus] = useState("Send Message");
 
   return (
@@ -17,8 +19,9 @@ const ContactPage = () => {
             <div>
               <h1>Get in Touch</h1>
               <p>
-                To purchase or request a demo for either of our products and
-                services, please fill in the form or reach us via:
+                Interested in starting a project together or have a
+                collaboration in mind? Fill out the form and let's bring your
+                ideas to life!
               </p>
               <ul>
                 <li>
@@ -29,7 +32,7 @@ const ContactPage = () => {
                     rel="noopener noreferrer"
                     href="https://wa.me/+2349169126429"
                   >
-                    (+234) 916 912 6429
+                    (+234) 807 548 9362
                   </a>
                 </li>
                 <li>
@@ -39,29 +42,40 @@ const ContactPage = () => {
                   <a
                     target={`_blank`}
                     rel="noopener noreferrer"
-                    href="mailto:biz@greencal.com"
+                    href="mailto:mosesnwigberi@gmail.com"
                   >
-                    biz@greencal.com
+                    mosesnwigberi@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <i className="fa fa-angle-right"></i>
+                  <i className="fa-solid fa-envelope"></i>
+                  <a
+                    target={`_blank`}
+                    rel="noopener noreferrer"
+                    href="mailto:moseschukwudinwigberi@gmail.com"
+                  >
+                    moseschukwudinwigberi@gmail.com
                   </a>
                 </li>
               </ul>
               <p>
-                For general enquiries and to speak directly with an expert
-                kindly reach us via:
+                For general enquiries and to speak directly with me kindly reach
+                me via whatsapp:
               </p>
               <button>
                 <a
                   target={`_blank`}
                   rel="noopener noreferrer"
-                  href="mailto:info@greencal.com"
+                  href="https://wa.me/+2348075489362"
                 >
-                  info@greencal.com
+                  <b>Message me</b>
                 </a>
               </button>
-              <h3>Head Office:</h3>
+              <h3>Location:</h3>
               <div>
                 <i className="fa-solid fa-building"></i>
-                Abakaliki, Ebonyi State, Nigeria.
+                Lagos State, Nigeria.
               </div>
               <br />
               <div className={styles.maps}>
@@ -81,7 +95,11 @@ const ContactPage = () => {
             </div>
           </div>
           <div className={styles.right}>
-            <form>
+            <form
+              onSubmit={(e) =>
+                Helpers.handleSubmit(setStatus, setVal, val, e, enqueueSnackbar)
+              }
+            >
               <div className={styles.formGroup}>
                 <label htmlFor="">Full Name:</label>
                 <input type="text" name="" id="" />
@@ -98,9 +116,9 @@ const ContactPage = () => {
                 <label htmlFor="">Interested Service:</label>
                 <select className="custom-select" style={{ width: "100%" }}>
                   <option>--Choose--</option>
-                  <option>Donation</option>
-                  <option>Support</option>
-                  <option>Grants</option>
+                  <option>Web Development</option>
+                  <option>Collaboration</option>
+                  <option>Others</option>
                 </select>
               </div>
               <div className={styles.formGroup}>

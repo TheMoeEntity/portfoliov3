@@ -76,3 +76,11 @@ export type portfolioData = {
   details: string[];
   slug: string;
 };
+export type replacements = {
+  name: string;
+  message: string;
+  phone: string;
+  service: string;
+  email: string;
+  greeting?: string;
+};
