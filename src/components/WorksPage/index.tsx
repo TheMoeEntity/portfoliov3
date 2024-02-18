@@ -1,9 +1,7 @@
 "use client";
 import Image from "next/image";
 import styles from "../../app/page.module.css";
-import profile from "../../../public/images/zstinger3.png";
 import { portfolioData } from "@/Helpers/types";
-import { Helpers } from "@/Helpers";
 
 const WorksPage = ({ single }: { single: portfolioData }) => {
   return (
@@ -21,7 +19,12 @@ const WorksPage = ({ single }: { single: portfolioData }) => {
               style={{
                 objectFit: "cover",
               }}
-              alt={"Picture of " + single?.name}
+              alt={
+                "Picture of " +
+                single?.name +
+                ". Picture src: " +
+                `/images/${single.images[0]}`
+              }
               fill
               quality={100}
               priority={true}
@@ -30,8 +33,8 @@ const WorksPage = ({ single }: { single: portfolioData }) => {
           </div>
           <div className={styles.details}>
             <div>
-              <p>{single.details[0]}</p> <br /> <br />
-              <p>{single.details[1]}</p> <br /> <br />
+              <p>{single.details[0]}</p>
+              <p>{single.details[1]}</p> <br />
               <p>{single.details[2]}</p>
               <div className={styles.skillSet}>
                 <div>

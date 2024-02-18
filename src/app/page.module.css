@@ -252,6 +252,7 @@
   display: flex;
   flex-flow: column wrap;
   margin: 20px auto;
+  margin-top: 0px;
 }
 .projects .img .overlay {
   position: absolute;
