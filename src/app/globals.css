@@ -294,7 +294,35 @@ a {
   color: white;
   background: rgba(0, 0, 0, 0.41);
 }
-
+.loading-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 30px;
+  height: 100vh;
+}
+.loading-block-head {
+  background-color: #f1f2f3;
+  border-radius: 7px;
+  height: 140px;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 12px;
+}
+.loading-block-body {
+  background-color: #f1f2f3;
+  border-radius: 15px;
+  height: 30px;
+  width: 100%;
+  margin: 10px 0;
+}
+.loading-block-footer {
+  background-color: #f1f2f3;
+  border-radius: 12px;
+  height: 100px;
+  width: 100%;
+  margin-top: 40px;
+}
 @media only screen and (max-width: 767px) {
   .notfound .notfound-404 h1 {
     font-size: 148px;
