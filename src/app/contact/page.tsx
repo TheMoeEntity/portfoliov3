@@ -1,7 +1,8 @@
-import ContactPage from "@/src/components/ContactPage";
+import dynamic from "next/dynamic";
+const ContactForm = dynamic(() => import("@/src/components/ContactPage"));
 
 const page = () => {
-  return <ContactPage />;
+  return <ContactForm />;
 };
 
 export default page;
