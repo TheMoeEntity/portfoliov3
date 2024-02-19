@@ -42,7 +42,7 @@ const Works = ({ works }: { works: portfolioData[] }) => {
   ];
   const router = useRouter();
   return (
-    <div id="projects" className={styles.services}>
+    <div id="projects" className={styles.works}>
       <h1 className={styles.title}>Works</h1>
       <section>
         <h1>Projects I have worked on</h1>
