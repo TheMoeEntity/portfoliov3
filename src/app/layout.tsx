@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Moe, Moses Chukwudi Nwigberi, Web Developer, Lagos, Ebonyi State, Nigeria",
   authors: [{ name: "Moses Chukwudi Nwigberi" }],
   creator: "Moses Chukwudi Nwigberi",
-  applicationName: "Greencal Foundation",
+  applicationName: "Moe's Portfolio",
   icons: [
     {
       rel: "icon",

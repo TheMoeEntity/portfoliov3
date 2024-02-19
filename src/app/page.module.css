@@ -238,8 +238,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
 }
-.skillSet > div {
-}
+
 .skillSet ul > li {
   margin: 20px 40px;
   color: #808080;
