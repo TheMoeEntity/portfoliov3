@@ -37,8 +37,8 @@ const AboutPage = () => {
             </h1>
             <p>
               Hey there! {`I'm`} Moses, but you can call me Moe. Welcome to my
-              world of pixels and passion! I'm a frontend web developer with a
-              fervent love for crafting captivating user experiences. Whether
+              world of pixels and passion!{` I'm `}a frontend web developer with
+              a fervent love for crafting captivating user experiences. Whether
               {`it's`} through the mesmerizing dance of{" "}
               <span>HTML, CSS, and TypeScript, </span>
               or the enchanting realm of iOS and Swift, I thrive on bringing
