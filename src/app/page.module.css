@@ -351,8 +351,8 @@
   display: block;
   font-weight: bolder;
   cursor: pointer;
+  padding: 20px;
   font-weight: bolder;
-  position: relative;
 }
 .details span:hover {
   text-decoration: underline;
