@@ -6,7 +6,8 @@ import { Helpers } from "@/Helpers";
 import { useSnackbar } from "notistack";
 
 const ContactPage = () => {
-  const { val, setVal, textAreaRef } = useResize();
+  const { val, setVal, textAreaRef, onOptionChangeHandler, selectedOption } =
+    useResize();
   const { enqueueSnackbar } = useSnackbar();
   const [status, setStatus] = useState("Send Message");
 
@@ -137,7 +138,14 @@ const ContactPage = () => {
           <div className={styles.right}>
             <form
               onSubmit={(e) =>
-                Helpers.handleSubmit(setStatus, setVal, val, e, enqueueSnackbar)
+                Helpers.handleSubmit(
+                  setStatus,
+                  setVal,
+                  val,
+                  e,
+                  enqueueSnackbar,
+                  selectedOption
+                )
               }
             >
               <div className={styles.formGroup}>
@@ -154,7 +162,11 @@ const ContactPage = () => {
               </div>
               <div className={styles.formGroup}>
                 <label htmlFor="">Interested Service:</label>
-                <select className="custom-select" style={{ width: "100%" }}>
+                <select
+                  onChange={onOptionChangeHandler}
+                  className="custom-select"
+                  style={{ width: "100%" }}
+                >
                   <option>--Choose--</option>
                   <option>Web Development</option>
                   <option>Collaboration</option>

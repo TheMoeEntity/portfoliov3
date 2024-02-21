@@ -1,5 +1,5 @@
 import { notFound, usePathname, useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { Helpers } from "..";
 import { linkType } from "../types";
 
@@ -14,9 +14,16 @@ export const useResize = () => {
         textAreaRef.current.scrollHeight + "px";
     }
   };
+  const [selectedOption, setSelectedOption] = useState<string>("--Choose--");
+  const onOptionChangeHandler = (
+    event: ChangeEvent<HTMLSelectElement>
+  ): void => {
+    console.log("User Selected Value - ", event.target.value);
+    setSelectedOption(event.target.value);
+  };
 
   useEffect(resizeTextArea, [val]);
-  return { val, setVal, textAreaRef };
+  return { val, setVal, textAreaRef, selectedOption, onOptionChangeHandler };
 };
 
 export const useScrollTop = () => {
