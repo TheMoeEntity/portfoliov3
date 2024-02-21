@@ -28,7 +28,8 @@ export const Header = () => {
         <div
           style={{
             opacity: open ? "1" : "0",
-            transform: open ? "scale(1)" : "scale(0.4)",
+            zIndex: open ? "3" : "-1",
+            transform: open ? "scale(1)" : "scale(0.1)",
           }}
           className={styles.sideContent}
         >
