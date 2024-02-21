@@ -3,6 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import styles from "../../app/page.module.css";
 import { useRouter } from "next/navigation";
 import { portfolioData } from "@/Helpers/types";
+import Link from "next/link";
 
 const Works = ({ works }: { works: portfolioData[] }) => {
   const router = useRouter();
@@ -36,9 +37,9 @@ const Works = ({ works }: { works: portfolioData[] }) => {
                 <p>
                   {x.details[0].split(/\s+/).slice(0, 20).join(" ") + "..."}
                 </p>
-                <div onClick={() => router.push("/works/" + x.slug)}>
-                  &nbsp;<a>L e a r n &nbsp; M o r e</a>
-                </div>
+                <Link href={"/works/" + x.slug}>
+                  &nbsp;<span>L e a r n &nbsp; M o r e</span>
+                </Link>
               </div>
             </div>
           </div>

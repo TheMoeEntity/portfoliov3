@@ -244,7 +244,8 @@
 
 .skillSet ul > li {
   margin: 20px 20px;
-  color: #808080;
+  font-weight: bolder;
+  color: #525252;
 }
 
 /* ---------------------- PROJECTS --------------------- */
@@ -343,22 +344,26 @@
 .projectInfo ul li b {
   font-weight: bolder;
 }
-.details a {
+.details span {
   color: black;
   text-align: right;
   margin-top: 20px;
   display: block;
+  font-weight: bolder;
   cursor: pointer;
   font-weight: bolder;
   position: relative;
 }
-.details a::before {
+.details span:hover {
+  text-decoration: underline;
+}
+.details span::before {
   position: absolute;
   top: 12px;
   right: 120px;
   content: "";
   background: #000;
-  width: 40px;
+  width: 50px;
   height: 1px;
 }
 

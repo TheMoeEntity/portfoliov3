@@ -38,9 +38,9 @@ const WorksPage = ({ single }: { single: portfolioData }) => {
               <p>{single.details[2]}</p>
               <div className={styles.skillSet}>
                 <div>
-                  <span>
+                  <aside>
                     <b> - Tech Stack</b>
-                  </span>
+                  </aside>
                   <ul>
                     {single.stack.map((x, i) => (
                       <li key={i}>{x}</li>
@@ -50,14 +50,19 @@ const WorksPage = ({ single }: { single: portfolioData }) => {
               </div>
               <div className={styles.skillSet}>
                 <div>
-                  <span>
+                  <aside>
                     <b> - Project Date:&nbsp;{single.date} </b>
-                  </span>
+                  </aside>
                 </div>
               </div>
-              <a target={`_blank`} rel="noopener noreferrer" href={single.url}>
+              <span>
+                <a
+                  target={`_blank`}
+                  rel="noopener noreferrer"
+                  href={single.url}
+                ></a>{" "}
                 L I V E&nbsp; P R E V I E W
-              </a>
+              </span>
             </div>
           </div>
         </div>
