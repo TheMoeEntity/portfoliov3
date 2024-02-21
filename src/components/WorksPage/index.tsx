@@ -55,14 +55,9 @@ const WorksPage = ({ single }: { single: portfolioData }) => {
                   </aside>
                 </div>
               </div>
-              <span>
-                <a
-                  target={`_blank`}
-                  rel="noopener noreferrer"
-                  href={single.url}
-                ></a>{" "}
-                L I V E&nbsp; P R E V I E W
-              </span>
+              <a target={`_blank`} rel="noopener noreferrer" href={single.url}>
+                <span>L I V E&nbsp; P R E V I E W</span>
+              </a>
             </div>
           </div>
         </div>
