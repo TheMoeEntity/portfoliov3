@@ -28,7 +28,7 @@ export const Header = () => {
         <div
           style={{
             opacity: open ? "1" : "0",
-            zIndex: open ? "3" : "-1",
+            zIndex: open ? "99999999999999999999" : "-1",
             transform: open ? "scale(1)" : "scale(0.1)",
           }}
           className={styles.sideContent}
