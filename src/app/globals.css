@@ -144,6 +144,7 @@ header ul li {
   font-size: 25px;
   height: 40px;
   border-radius: 50%;
+  animation: pulse 1s infinite;
 }
 .whatsapp-link a {
   color: #fff;
@@ -351,6 +352,11 @@ a {
 @media only screen and (max-width: 767px) {
   .notfound .notfound-404 h1 {
     font-size: 148px;
+  }
+}
+@keyframes pulse {
+  10% {
+    transform: scale(1.1);
   }
 }
 

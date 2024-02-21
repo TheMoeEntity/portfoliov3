@@ -40,9 +40,7 @@ export const Header = () => {
             <li onClick={() => linkAction("/")}>HOME</li>
             <li onClick={() => linkAction("/#services")}>SERVICES</li>
             <li onClick={() => linkAction("/#projects")}>WORKS</li>
-            <li>
-              <Link href="/#about">ABOUT</Link>
-            </li>
+            <li onClick={() => linkAction("/about")}>ABOUT</li>
             <li onClick={() => linkAction("/contact")}>CONTACT ME</li>
           </ul>
         </div>
