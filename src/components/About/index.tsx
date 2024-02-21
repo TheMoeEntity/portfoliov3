@@ -37,10 +37,10 @@ const About = () => {
             <span>frontend web developer</span> with a fiery passion for iOS and
             Swift. 🚀 <br /> <br />
             Imagine this: coffee brewing, code flowing, and boundless creativity
-            at play. That's me! With a fusion of creativity and technical
+            at play. {`That's`} me! With a fusion of creativity and technical
             prowess, I craft stunning user interfaces that mesmerize. <br />{" "}
-            <br /> But wait, there's more! By night, I become an iOS enthusiast,
-            diving into app development with Swift.
+            <br /> But wait, {`there's`} more! By night, I become an iOS
+            enthusiast, diving into app development with Swift.
             <br /> <br />I believe great websites and apps are like art—blending
             functionality and beauty to leave users spellbound. So, wield your
             virtual sword and join me in pushing boundaries and creating digital
