@@ -51,10 +51,12 @@
 .sidebar.animateIn {
   opacity: 1;
   transform: scale(1);
+  z-index: 3;
 }
 .sidebar.animateOut {
   opacity: 0;
   transform: scale(0.4);
+  z-index: -1;
 }
 @keyframes animateIn {
   0% {

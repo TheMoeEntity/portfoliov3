@@ -58,9 +58,6 @@ const WorksPage = ({ single }: { single: portfolioData }) => {
                 </div>
               </div>
               <div className={styles.viewMore}>
-                {/* <button onClick={() => location.assign(single.url)}>
-                  L I V E&nbsp; P R E V I E W
-                </button> */}
                 <a
                   target={`_blank`}
                   rel="noopener noreferrer"

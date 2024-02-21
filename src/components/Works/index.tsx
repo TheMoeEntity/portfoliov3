@@ -38,9 +38,9 @@ const Works = ({ works }: { works: portfolioData[] }) => {
                   {x.details[0].split(/\s+/).slice(0, 20).join(" ") + "..."}
                 </p>
                 <div className={styles.viewMore}>
-                  <button onClick={() => router.push("/works/" + x.slug)}>
-                    L e a r n &nbsp; M o r e
-                  </button>
+                  <Link href={"/works/" + x.slug}>
+                    <button>L e a r n &nbsp; M o r e</button>
+                  </Link>
                 </div>
               </div>
             </div>
