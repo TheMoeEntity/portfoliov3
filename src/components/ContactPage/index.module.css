@@ -97,6 +97,7 @@
   font-size: 13.5px;
   font-weight: light;
   margin: 16px 0;
+  margin-left: -15px;
   cursor: pointer;
   list-style-type: none;
 }
