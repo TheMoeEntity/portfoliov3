@@ -9,9 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 const italiana = Poppins({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Moe's Portfolio - Frontend Web Developer",
+  title: "MOE - Frontend Web Developer",
   description:
-    "Portfolio page for Moses Chukwudi Nwigberi, a web developer in Lagos, Nigeria",
+    "Portfolio page for Moses Chukwudi Nwigberi, a bad-ass web developer based in Lagos, Nigeria.",
   keywords:
     "Moe, Moses Chukwudi Nwigberi, Web Developer, Lagos, Ebonyi State, Nigeria",
   authors: [{ name: "Moses Chukwudi Nwigberi" }],
