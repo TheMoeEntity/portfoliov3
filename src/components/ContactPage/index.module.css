@@ -6,6 +6,20 @@
 .about a {
   color: black;
 }
+.links {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 15px 10px 15px 10px;
+  color: #031323;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.links span:first-child {
+  margin-left: 0;
+}
+.links span {
+  margin-left: 15px;
+}
 .title {
   text-align: center;
   color: #f0f0f0;

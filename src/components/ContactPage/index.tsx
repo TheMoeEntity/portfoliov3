@@ -18,6 +18,46 @@ const ContactPage = () => {
           <div className={styles.left}>
             <div>
               <h1>Get in Touch</h1>
+              <div>
+                <div className={styles.links}>
+                  <span>
+                    <a
+                      target={`_blank`}
+                      rel="noopener noreferrer"
+                      href="https://github.com/TheMoeEntity"
+                    >
+                      <i className="fa-brands fa-github"></i>
+                    </a>
+                  </span>
+                  <span>
+                    <a
+                      target={`_blank`}
+                      rel="noopener noreferrer"
+                      href="https://instagram.com/NC_Moses"
+                    >
+                      <i className="fa-brands fa-instagram"></i>
+                    </a>
+                  </span>
+                  <span>
+                    <a
+                      target={`_blank`}
+                      rel="noopener noreferrer"
+                      href="https://x.com/NMoses_"
+                    >
+                      <i className="fa-brands fa-twitter"></i>
+                    </a>
+                  </span>
+                  <span>
+                    <a
+                      target={`_blank`}
+                      rel="noopener noreferrer"
+                      href="https://linkedin.com/in/moses.nwigberi"
+                    >
+                      <i className="fa-brands fa-linkedin"></i>
+                    </a>
+                  </span>
+                </div>
+              </div>
               <p>
                 Interested in starting a project together or have a
                 collaboration in mind? Fill out the form and {`let's `}bring

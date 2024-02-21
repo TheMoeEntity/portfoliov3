@@ -140,7 +140,7 @@
   margin: 10px 5px;
 }
 .about section > div:nth-child(2) {
-  padding: 20px 40px 20px 90px;
+  padding: 120px 40px 20px 90px;
   position: relative;
   transition: 0.5s;
 }
@@ -164,6 +164,9 @@
 }
 .name {
   font-size: 45px;
+  position: absolute;
+  top: 0;
+  left: 80px;
 }
 .about .contact {
   background-color: transparent;
@@ -240,7 +243,7 @@
 }
 
 .skillSet ul > li {
-  margin: 20px 40px;
+  margin: 20px 20px;
   color: #808080;
 }
 
@@ -433,8 +436,12 @@
     margin: 10px 0px;
     flex: 100%;
   }
+  .name {
+    left: 10px;
+    font-size: 36px;
+  }
   .about section > div:nth-child(2) {
-    padding: 20px 0px 20px 0px;
+    padding: 120px 0px 20px 0px;
     position: relative;
     width: 100%;
   }
@@ -443,12 +450,6 @@
     font-size: small;
     line-height: 1.8;
     color: #929292;
-  }
-  .about .links {
-    display: flex;
-    flex-flow: row wrap;
-    padding: 15px 10px 15px 50px;
-    color: #031323;
   }
 
   .about .contact {

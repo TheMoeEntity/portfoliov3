@@ -50,7 +50,47 @@ export const useScrollTop = () => {
   };
   return { scrollTop, scrollBtn, pathname };
 };
-
+export const useWhatsappLink = () => {
+  const whatsappLink = useRef<HTMLDivElement | null>(null);
+  const isBrowser = () => typeof window !== "undefined";
+  useEffect(() => {
+    window.addEventListener("scroll", animateIn);
+    return () => {
+      window.removeEventListener("scroll", animateIn);
+    };
+  }, []);
+  const animateIn = () => {
+    if (!isBrowser()) return;
+    // if (whatsappLink.current) {
+    //   if (
+    //     document.body.scrollTop > 160 ||
+    //     document.documentElement.scrollTop > 160
+    //   ) {
+    //     whatsappLink.current.style.bottom = "50px";
+    //     whatsappLink.current.style.opacity = "1";
+    //   } else {
+    //     whatsappLink.current.style.bottom = "-50px";
+    //     whatsappLink.current.style.opacity = "0";
+    //   }
+    // }
+  };
+  return { whatsappLink };
+};
+export const useFullWidth = (fullWidth: string) => {
+  const [anim, setAnim] = useState<string>("");
+  const timer = useRef<any | null>(null);
+  useEffect(() => {
+    timer.current = setTimeout(() => {
+      setAnim(fullWidth);
+    }, 2000);
+    return () => {
+      if (timer.current) {
+        clearTimeout(timer.current);
+      }
+    };
+  }, []);
+  return { anim, setAnim };
+};
 export const useStickyNav = (isStickyClass: string) => {
   const [sticky, setSticky] = useState("");
   const headerRef = useRef<HTMLDivElement | null>(null);

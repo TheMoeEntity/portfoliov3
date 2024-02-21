@@ -1,45 +1,10 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
 import styles from "../../app/page.module.css";
-import profile from "../../../public/images/zstinger3.png";
-import nosrati from "../../../public/images/nosrati.png";
-import dove from "../../../public/images/dovehospital.png";
-import aman from "../../../public/images/aman.png";
 import { useRouter } from "next/navigation";
 import { portfolioData } from "@/Helpers/types";
 
 const Works = ({ works }: { works: portfolioData[] }) => {
-  const assets: {
-    name: string;
-    img: StaticImageData;
-    slug: string;
-    text: string;
-  }[] = [
-    {
-      name: "ZStinger Inc.",
-      img: profile,
-      slug: "zstinger-inspections",
-      text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
-    },
-    {
-      name: "Nosrati Law Group",
-      img: nosrati,
-      slug: "nosratilaw",
-      text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
-    },
-    {
-      name: "Dove Hospital",
-      img: dove,
-      slug: "dovehospital",
-      text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
-    },
-    {
-      name: "AMAN Awards",
-      img: aman,
-      slug: "aman-awards",
-      text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
-    },
-  ];
   const router = useRouter();
   return (
     <div id="projects" className={styles.works}>

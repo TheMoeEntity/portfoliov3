@@ -127,6 +127,30 @@ header ul li {
   transition: 0.4s;
   z-index: 1000;
 }
+.whatsapp-link {
+  background-color: #25d366;
+  position: fixed;
+  bottom: 90px;
+  opacity: 1;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s;
+  color: #25d366;
+  z-index: 1000;
+  width: 40px;
+  font-size: 25px;
+  height: 40px;
+  border-radius: 50%;
+}
+.whatsapp-link a {
+  color: #fff;
+}
+.whatsapp-link a:visited {
+  color: #fff;
+}
 .green {
   color: #00d169;
 }
