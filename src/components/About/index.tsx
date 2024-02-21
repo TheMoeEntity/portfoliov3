@@ -47,7 +47,7 @@ const About = () => {
             wonders. Welcome to my portfolio, where possibilities are limitless.
             {` Let's`} make magic together! ✨
           </p>
-          <Link href="/contact" prefetch={true}>
+          <Link href="/contact">
             <div className={styles.contact}>HIRE ME!</div>
           </Link>
         </div>

@@ -366,7 +366,25 @@
   width: 50px;
   height: 1px;
 } */
-
+.viewMore {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  width: 100%;
+}
+.viewMore button,
+.viewMore a {
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  font-weight: bolder;
+}
+.viewMore button:hover {
+  text-decoration: underline;
+}
 @media screen and (max-width: 490px) {
   .title {
     font-size: 70px;

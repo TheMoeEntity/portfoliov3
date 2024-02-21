@@ -1,9 +1,10 @@
 import { Helpers } from "@/Helpers";
 import { portfolioData } from "@/Helpers/types";
+import WorksPage from "@/src/components/WorksPage";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
-const WorksPage = dynamic(() => import("../../../components/WorksPage"));
+// const WorksPage = dynamic(() => import("../../../components/WorksPage"));
 
 export async function generateMetadata({
   params,

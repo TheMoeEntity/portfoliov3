@@ -2,8 +2,10 @@
 import Image from "next/image";
 import styles from "../../app/page.module.css";
 import { portfolioData } from "@/Helpers/types";
+import { useRouter } from "next/navigation";
 
 const WorksPage = ({ single }: { single: portfolioData }) => {
+  const router = useRouter();
   return (
     <div id="projects" className={styles.services}>
       <h1 className={styles.title}>Works</h1>
@@ -55,9 +57,18 @@ const WorksPage = ({ single }: { single: portfolioData }) => {
                   </aside>
                 </div>
               </div>
-              <a target={`_blank`} rel="noopener noreferrer" href={single.url}>
-                <span>L I V E&nbsp; P R E V I E W</span>
-              </a>
+              <div className={styles.viewMore}>
+                {/* <button onClick={() => location.assign(single.url)}>
+                  L I V E&nbsp; P R E V I E W
+                </button> */}
+                <a
+                  target={`_blank`}
+                  rel="noopener noreferrer"
+                  href={single.url}
+                >
+                  <span>L I V E&nbsp; P R E V I E W</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
