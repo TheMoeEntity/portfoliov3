@@ -4,9 +4,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Poppins } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
-const italiana = Poppins({ weight: ["400"], subsets: ["latin"] });
+const poppins = Poppins({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "MOE - Frontend Web Developer",
@@ -17,25 +15,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Moses Chukwudi Nwigberi" }],
   creator: "Moses Chukwudi Nwigberi",
   applicationName: "Moe's Portfolio",
-  icons: [
-    {
-      rel: "icon",
-      type: "image/png",
-      sizes: "32x32",
-      url: "/favicon-32x32.png",
-    },
-    {
-      rel: "icon",
-      type: "image/png",
-      sizes: "16x16",
-      url: "/favicon-16x16.png",
-    },
-    {
-      rel: "apple-touch-icon",
-      sizes: "180x180",
-      url: "/apple-touch-icon.png",
-    },
-  ],
 };
 
 export default function RootLayout({
@@ -45,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={italiana.className}>
+      <body className={poppins.className}>
         <AppLayout>{children}</AppLayout>
         <Script
           src="https://kit.fontawesome.com/4ef8c63dd7.js"
