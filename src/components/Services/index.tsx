@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "../../app/page.module.css";
-import profile from "../../../public/images/services.webp";
+import coffee from "../../../public/images/coffee.jpg";
 
 const Services = () => {
   return (
@@ -53,7 +53,7 @@ const Services = () => {
         </div>
         <div>
           <Image
-            src={profile}
+            src={coffee}
             style={{
               objectFit: "cover",
             }}
