@@ -1,6 +1,4 @@
-import AppLayout from "../components/AppLayout";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Poppins } from "next/font/google";
@@ -25,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <AppLayout>{children}</AppLayout>
+        {children}
         <Script
           src="https://kit.fontawesome.com/4ef8c63dd7.js"
           crossOrigin="anonymous"
