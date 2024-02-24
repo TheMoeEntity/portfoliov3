@@ -71,7 +71,7 @@ const ContactPage = () => {
                   <a
                     target={`_blank`}
                     rel="noopener noreferrer"
-                    href="https://wa.me/+2349169126429"
+                    href="https://wa.me/+2348075489362"
                   >
                     (+234) 807 548 9362
                   </a>
