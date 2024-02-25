@@ -163,7 +163,7 @@ const ContactPage = () => {
               <div className={styles.formGroup}>
                 <label htmlFor="">Interested Service:</label>
                 <select
-                  onChange={onOptionChangeHandler}
+                  onChange={(e) => onOptionChangeHandler(e)}
                   className="custom-select"
                   style={{ width: "100%" }}
                 >
