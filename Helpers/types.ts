@@ -82,5 +82,6 @@ export type replacements = {
   phone: string;
   service: string;
   email: string;
-  greeting?: string;
+  greeting: string;
+  sent: string
 };

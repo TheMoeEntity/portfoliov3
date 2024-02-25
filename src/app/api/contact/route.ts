@@ -30,6 +30,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
     email,
     greeting: Helpers.setGreeting(),
     service: choise,
+    sent: new Date().toLocaleString(),
   };
   let htmlToSend = createHTMLToSend(emailPath, replacements);
   let mailData = {
