@@ -153,6 +153,8 @@ export const useValidRoute = (pathname: string): boolean => {
     "/",
     "/about",
     "/works/[id]",
+    '/blog',
+    "/blog" + params.slice(5, params.length),
     "/works" + params.slice(6, params.length),
   ];
   const checkValid = (pathname: string): boolean => {
