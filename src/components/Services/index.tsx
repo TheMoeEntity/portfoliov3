@@ -20,6 +20,8 @@ const Services = () => {
                 <li>Express.js</li>
                 <li>PHP</li>
                 <li>Sanity CMS</li>
+                <li>Firebase</li>
+                <li>MongoDB </li>
               </ul>
             </div>
             <div>
@@ -28,8 +30,6 @@ const Services = () => {
               </span>
               <ul>
                 <li>Version Control (GitHub)</li>
-                <li>Firebase</li>
-                <li>MongoDB </li>
                 <li>Postman</li>
                 <li>Vercel/Netlify</li>
               </ul>
@@ -47,6 +47,7 @@ const Services = () => {
                 <li>React</li>
                 <li>Next.js</li>
                 <li>Svelte.js</li>
+                <li>Vue - Currently learning Vue.js {`:)`} </li>
               </ul>
             </div>
           </div>

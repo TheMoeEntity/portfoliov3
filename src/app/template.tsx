@@ -7,6 +7,7 @@ import { useValidRoute } from "@/Helpers/hooks";
 import NotFound from "../app/not-found";
 import { SnackbarProvider } from "notistack";
 import { motion } from "framer-motion";
+import SidePanel from "../components/SidePanel";
 
 const Template = ({ children }: { children: ReactNode }) => {
   const { scrollBtn, scrollTop, pathname } = useScrollTop();
@@ -27,6 +28,7 @@ const Template = ({ children }: { children: ReactNode }) => {
           {children}
         </motion.div>
         {<Footer />}
+        {/* <SidePanel /> */}
         <div ref={whatsappLink} className="whatsapp-link">
           <a
             target={`_blank`}

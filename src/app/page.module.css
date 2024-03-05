@@ -285,8 +285,8 @@
 }
 
 .services section>div:nth-child(2) {
-  max-width: calc(0.42 * 1000px);
-  height: calc(0.42 * 1481px);
+  max-width: calc(0.39 * 1000px);
+  height: calc(0.39 * 1481px);
   position: relative;
 }
 
