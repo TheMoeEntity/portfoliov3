@@ -56,7 +56,7 @@ const Blog = ({ single }: { single: blogPostType }) => {
                                                     </>
                                                 ))
                                             }
-                                            <i><b>{x.texts[0]}</b> </i> <br /> <br />
+
                                         </div> <br />
                                     </>
                                 ))
