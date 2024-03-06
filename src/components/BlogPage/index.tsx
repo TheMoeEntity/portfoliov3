@@ -5,8 +5,9 @@ import moe from '../../../public/images/profile.jpg'
 import moe2 from '../../../public/images/coffee.jpg'
 import moe3 from '../../../public/images/services.webp'
 import { useRouter } from "next/navigation";
+import { blogPostType } from "@/Helpers/types";
 
-const BlogPage = () => {
+const BlogPage = ({ blog }: { blog: blogPostType[] }) => {
     const { push } = useRouter()
     const assets = [
         {
@@ -28,20 +29,20 @@ const BlogPage = () => {
             </section>
             <div className={styles.blogGrid}>
                 {
-                    assets.map((x, i) => (
+                    blog.map((x, i) => (
                         <div key={i}>
                             <div className={styles.img}>
                                 <div className={styles.overlay}>
-                                    <div onClick={() => push('/blog/my-laptop-and-i')}>
+                                    <div onClick={() => push('/blog/' + x.slug)}>
                                         READ MORE
                                     </div>
                                 </div>
                                 <Image
-                                    src={x.img}
+                                    src={'images/' + x.banner}
                                     style={{
                                         objectFit: "cover",
                                     }}
-                                    alt={"Profile of " + "moe"}
+                                    alt={"Banner picture for " + x.title}
                                     fill
                                     quality={100}
                                     priority={true}
@@ -50,11 +51,11 @@ const BlogPage = () => {
                             </div>
                             <div className={styles.deets}>
                                 <div className={styles.timeStamp}>
-                                    <span>February 26, 2024.</span>
+                                    <span>{x.date}</span>
                                 </div>
-                                <h5 className="h5 mt-4">My Laptop and I: A Love Story of Code and Chill</h5>
+                                <h5 className="h5 mt-4">{x.title}</h5>
                                 <p className="mt-4">
-                                    When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove
+                                    {x.posts[0].chapter.split(/\s+/).slice(0, 20).join(" ") + "..."}
                                 </p>
                             </div>
                         </div>

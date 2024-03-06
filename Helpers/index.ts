@@ -1,6 +1,6 @@
 import axios from "axios";
 import { FormEvent } from "react";
-import { getDocuments } from "./lib/firebase";
+import { getBlog, getDocuments } from "./lib/firebase";
 import { linkType, testimonialsType } from "./types";
 
 export class Helpers {
@@ -25,13 +25,28 @@ export class Helpers {
       hour < 12
         ? "Good Morning"
         : hour < 18
-        ? "Good Afternoon"
-        : "Good Evening";
+          ? "Good Afternoon"
+          : "Good Evening";
 
     return timeCheck;
   };
+  static getBlogs = async () => {
+    try {
+      return await this.getData3();
+    } catch (error) {
+      return null;
+    }
+  }
   static getSingle = async (slug: string) => {
     const data = await this.getData2();
+    if (!data) return;
+    const single = data.find((x) => {
+      return x.slug == slug;
+    });
+    return single;
+  };
+  static getSingleBlog = async (slug: string) => {
+    const data = await this.getData3();
     if (!data) return;
     const single = data.find((x) => {
       return x.slug == slug;
@@ -41,6 +56,13 @@ export class Helpers {
   static getData2 = async () => {
     try {
       return await getDocuments();
+    } catch (error) {
+      return null;
+    }
+  };
+  static getData3 = async () => {
+    try {
+      return await getBlog()
     } catch (error) {
       return null;
     }
@@ -57,17 +79,17 @@ export class Helpers {
     const data = {
       fullName: (
         e.target[
-          0 as unknown as keyof typeof e.target
+        0 as unknown as keyof typeof e.target
         ] as unknown as HTMLInputElement
       ).value,
       email: (
         e.target[
-          1 as unknown as keyof typeof e.target
+        1 as unknown as keyof typeof e.target
         ] as unknown as HTMLInputElement
       ).value,
       phone: (
         e.target[
-          2 as unknown as keyof typeof e.target
+        2 as unknown as keyof typeof e.target
         ] as unknown as HTMLInputElement
       ).value,
       choise: selectedOption,

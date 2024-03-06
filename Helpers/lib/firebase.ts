@@ -35,4 +35,13 @@ export const getDocuments = async () => {
   });
   return arr;
 };
+export const getBlog = async () => {
+  const colRef = collection(db, "blog");
+  const docsSnap = await getDocs(colRef);
+  let arr: DocumentData[] = [];
+  docsSnap.forEach((doc) => {
+    arr.push(doc.data());
+  });
+  return arr;
+};
 export default firebase_app;

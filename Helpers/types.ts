@@ -5,6 +5,17 @@ export type nomSingle = {
   nomination: string;
   isWinner?: boolean;
 };
+export type blogPostType = {
+  banner: string
+  title: string
+  slug: string
+  end: string
+  date: string
+  posts: {
+    chapter: string
+    texts: string[]
+  }[]
+}
 export type testimonialsType = {
   img: StaticImageData;
   name: string;
