@@ -178,6 +178,7 @@
 
 .blogTexts article aside {
   font-weight: bolder !important;
+  margin-top: 30px;
   margin-bottom: -40px;
   color: black !important;
   font-size: 18px;
@@ -442,6 +443,7 @@
   font-size: 15px !important;
 }
 
+
 .projectInfo {
   margin-top: 40px;
   width: 100%;
@@ -622,7 +624,42 @@
   box-shadow: 0px 2px 7px -4px rgba(0, 0, 0, 0.21);
 }
 
+.authorSect {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-top: 1px solid #8080803f;
+  margin-top: 100px;
+  padding: 40px 10px;
+  border-bottom: 1px solid #8080803f;
+}
+
+.authorSect>div:first-child {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  flex-grow: 0;
+  overflow: hidden;
+}
+
+.authorSect>div:nth-child(2) {
+  margin-left: 10px;
+  width: 80%;
+  color: black;
+}
+
+.authorSect>div:nth-child(2) p {
+  font-size: small !important;
+}
+
 @media screen and (max-width: 490px) {
+  .authorSect>div:nth-child(2) {
+    margin-left: 0;
+    margin-top: 30px;
+    width: 100%;
+  }
+
   .blogGrid {
     width: 100%;
     margin-bottom: 0px;
