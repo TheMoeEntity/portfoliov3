@@ -34,7 +34,7 @@ const About = () => {
           </h1>
           <p>
             Welcome to my realm of pixels and code! {`I'm`} Moe, a{" "}
-            <span>frontend web developer</span> with a fiery passion for iOS and
+            <span>frontend web developer</span> with a fiery passion for <span>Next.js</span>, iOS and
             Swift. 🚀 <br /> <br />
             Imagine this: coffee brewing, code flowing, and boundless creativity
             at play. {`That's`} me! With a fusion of creativity and technical

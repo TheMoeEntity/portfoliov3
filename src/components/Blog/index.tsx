@@ -87,7 +87,7 @@ const Blog = ({ single }: { single: blogPostType }) => {
                                         <strong>Written by: Moses Nwigberi.</strong>
                                     </aside>
                                     <p>
-                                        Hello, I'm Moe, and I hope you enjoyed reading this post as much as I enjoyed writing it! If you have any questions or feedback, feel free to reach out. Thanks for taking the time to explore the world of frontend development with me. Stay curious and keep coding! ;) 🚀
+                                        Hello, {`I'm`} Moe, and I hope you enjoyed reading this post as much as I enjoyed writing it! If you have any questions or feedback, feel free to reach out. Thanks for taking the time to explore the world of frontend development with me. Stay curious and keep coding! ;) 🚀
                                     </p>
                                     <aside>
                                         {single.date}

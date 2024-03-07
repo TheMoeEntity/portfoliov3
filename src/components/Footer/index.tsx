@@ -23,7 +23,7 @@ const Footer = () => {
               />
               <p>
                 Welcome to my realm of pixels and code! {`I'm `}Moe, a frontend
-                web developer with a fiery passion for iOS and Swift.
+                web developer with a fiery passion for Next.js, iOS and Swift.
               </p>
             </div>
 
@@ -38,7 +38,7 @@ const Footer = () => {
                 }}
               />
               <p>
-                <a href="/#about" className="text-dark">
+                <a href="/about" className="text-dark">
                   About
                 </a>
               </p>
@@ -53,10 +53,16 @@ const Footer = () => {
                 </a>
               </p>
               <p>
+                <Link href="/blog" className="text-dark">
+                  Blog
+                </Link>
+              </p>
+              <p>
                 <Link href="/contact" className="text-dark">
                   Get in touch
                 </Link>
               </p>
+
             </div>
 
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
