@@ -6,8 +6,8 @@ import { blogPostType } from "@/Helpers/types";
 const Blog = ({ single }: { single: blogPostType }) => {
     return (
         <div id="projects" className={styles.services}>
-            <h1 className={styles.title}>Posts</h1>
-            <section>
+            <h1 className={`${styles.title}`}>Posts</h1>
+            <section className={`${styles.blogTitle}`}>
                 <h1>{single.title}</h1>
             </section>
             <div className={styles.projects}>
@@ -15,7 +15,7 @@ const Blog = ({ single }: { single: blogPostType }) => {
                     <div className={styles.img}>
                         <div className={styles.overlay}></div>
                         <Image
-                            src={'/images/' + single.banner}
+                            src={'/images/' + single.banner[1]}
                             style={{
                                 objectFit: "cover",
                             }}
@@ -25,14 +25,14 @@ const Blog = ({ single }: { single: blogPostType }) => {
                             fill
                             quality={100}
                             priority={true}
-                            sizes="(max-width: 2560px) 100vw, (max-width: 2560px) 50vw, 33vw"
+                            sizes="(max-width: auto) 100vw, (max-width: auto) 50vw, 33vw"
                         />
                     </div>
-                    <div className={styles.details}>
+                    <div className={`${styles.details} ${styles.blogTexts}`}>
                         <div>
                             {
                                 single.posts.map((x, i) => (
-                                    <>
+                                    <div key={i}>
                                         <div>
                                             <span className="h3">{x.chapter}</span>
                                             {
@@ -41,11 +41,11 @@ const Blog = ({ single }: { single: blogPostType }) => {
                                                         {
                                                             i === 0 && x != '' ? (
                                                                 <article>
-                                                                    <i>
+                                                                    <aside>
                                                                         <b>
                                                                             {x}
                                                                         </b>
-                                                                    </i>
+                                                                    </aside>
                                                                     <br /> <br />
                                                                 </article>) : (
                                                                 <article>
@@ -58,10 +58,10 @@ const Blog = ({ single }: { single: blogPostType }) => {
                                             }
 
                                         </div> <br />
-                                    </>
+                                    </div>
                                 ))
                             }
-                            <div style={{ color: 'black', fontWeight: 'bolder' }} className={styles.skillSet}>
+                            <div style={{ color: 'black', fontWeight: 'bolder' }} className={`${styles.end} ${styles.skillSet}`}>
                                 <strong>{single.end}</strong>
                             </div>
 

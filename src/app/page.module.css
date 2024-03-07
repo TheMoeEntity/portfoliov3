@@ -151,12 +151,38 @@
   position: absolute;
   left: 50%;
   display: 100%;
-  top: -5%;
+  top: -4%;
   z-index: -1;
   overflow: hidden;
   white-space: nowrap;
   transform: translateX(-50%);
 }
+
+.blogTitle {
+  text-align: center;
+  font-size: 170px;
+}
+
+.end {
+  padding: 40px 20px;
+  font-size: 14px;
+  border: 1px dashed #8080806b;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+.blogTexts article {
+  font-size: 15.5px !important;
+  line-height: 2.3;
+}
+
+.blogTexts article aside {
+  font-weight: bolder !important;
+  margin-bottom: -40px;
+  color: black !important;
+  font-size: 18px;
+}
+
 
 .about section {
   display: flex;
@@ -406,9 +432,14 @@
   width: 700px;
   max-width: 100%;
   padding: 0 20px;
-  font-size: small;
-  line-height: 1.8;
+  font-size: 15px !important;
+  line-height: 2.3;
   color: #929292;
+}
+
+.details>div p {
+  line-height: 2.3;
+  font-size: 15px !important;
 }
 
 .projectInfo {

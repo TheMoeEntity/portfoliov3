@@ -38,7 +38,7 @@ const BlogPage = ({ blog }: { blog: blogPostType[] }) => {
                                     </div>
                                 </div>
                                 <Image
-                                    src={'images/' + x.banner}
+                                    src={'/images/' + x.banner[0]}
                                     style={{
                                         objectFit: "cover",
                                     }}
@@ -55,7 +55,7 @@ const BlogPage = ({ blog }: { blog: blogPostType[] }) => {
                                 </div>
                                 <h5 className="h5 mt-4">{x.title}</h5>
                                 <p className="mt-4">
-                                    {x.posts[0].chapter.split(/\s+/).slice(0, 20).join(" ") + "..."}
+                                    {x.posts[0].texts[1].split(/\s+/).slice(0, 20).join(" ") + "..."}
                                 </p>
                             </div>
                         </div>

@@ -6,7 +6,7 @@ export type nomSingle = {
   isWinner?: boolean;
 };
 export type blogPostType = {
-  banner: string
+  banner: string[]
   title: string
   slug: string
   end: string
