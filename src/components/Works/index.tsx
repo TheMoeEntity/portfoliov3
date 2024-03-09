@@ -4,7 +4,10 @@ import styles from "../../app/page.module.css";
 import { portfolioData } from "@/Helpers/types";
 import Link from "next/link";
 
+
+
 const Works = ({ works }: { works: portfolioData[] }) => {
+
   return (
     <div id="projects" className={styles.works}>
       <h1 className={styles.title}>Works</h1>
@@ -14,7 +17,7 @@ const Works = ({ works }: { works: portfolioData[] }) => {
       <div className={styles.projects}>
         {works.length > 0
           ? works.map((x) => (
-            <div key={x.id}>
+            <div className={styles.proj} key={x.id}>
               <div className={styles.img}>
                 <div className={styles.overlay}>
                   <div className={styles.projectName}>{x.name}</div>
@@ -46,6 +49,8 @@ const Works = ({ works }: { works: portfolioData[] }) => {
             </div>
           )) : <div className="loading-failed">
             <i className={`fa fa-spinner ${styles.spinning}`}></i> Loading Works..</div>}
+
+
       </div>
     </div>
   );
