@@ -45,7 +45,7 @@ const About = () => {
             <p>
               <span ref={ref}> {" "}</span>
               <br /> <br />
-              <span> Imagine this: coffee brewing, code flowing, and boundless creativity at play. That's me! With a fusion of creativity and technical prowess, I craft stunning user interfaces that mesmerize.</span>
+              <span> Imagine this: coffee brewing, code flowing, and boundless creativity at play. {`That's`} me! With a fusion of creativity and technical prowess, I craft stunning user interfaces that mesmerize.</span>
               <br />{" "}
               <br /> But wait, {`there's`} more! By night, I become an iOS
               enthusiast, diving into app development with Swift.
