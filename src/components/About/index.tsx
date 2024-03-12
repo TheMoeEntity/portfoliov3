@@ -16,11 +16,6 @@ const About = () => {
     text:
       "Welcome to my realm of pixels and code! I'm Moe, a frontend web developer with a fiery passion for Next.js iOS and Swift. 🚀 "
   });
-  const { ref: ref2 } = useScramble({
-    speed: .9,
-    text:
-      "Imagine this: coffee brewing, code flowing, and boundless creativity at play. That's me! With a fusion of creativity and technical prowess, I craft stunning user interfaces that mesmerize."
-  });
 
   return (
     <Parallax>
@@ -50,7 +45,7 @@ const About = () => {
             <p>
               <span ref={ref}> {" "}</span>
               <br /> <br />
-              <span ref={ref2}></span>
+              <span> Imagine this: coffee brewing, code flowing, and boundless creativity at play. That's me! With a fusion of creativity and technical prowess, I craft stunning user interfaces that mesmerize.</span>
               <br />{" "}
               <br /> But wait, {`there's`} more! By night, I become an iOS
               enthusiast, diving into app development with Swift.
