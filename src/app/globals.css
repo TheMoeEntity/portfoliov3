@@ -83,6 +83,12 @@ body {
   scroll-behavior: smooth !important;
 }
 
+svg {
+  font-weight: bold;
+  max-width: 600px;
+  height: 100%;
+}
+
 a {
   color: inherit;
   text-decoration: none;
