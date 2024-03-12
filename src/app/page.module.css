@@ -728,6 +728,7 @@
     height: calc(0.32 * 1481px);
     margin-top: 70px;
     width: 100%;
+    display: none;
   }
 
   .services section>div:first-child {
