@@ -15,8 +15,8 @@ const Works = ({ works }: { works: portfolioData[] }) => {
       <div className={styles.projects}>
         {works.length > 0
           ? works.map((x) => (
-            <Parallax>
-              <div className={styles.proj} key={x.id}>
+            <Parallax key={x.id}>
+              <div className={styles.proj} >
                 <div className={styles.img}>
                   <div className={styles.overlay}>
                     <div className={styles.projectName}>{x.name}</div>
