@@ -98,7 +98,7 @@ const Footer = () => {
         className="text-center p-3"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.01)" }}
       >
-        © 2024 Copyright: &nbsp;
+        © {new Date().getFullYear()} Copyright: &nbsp;
         <a className="text-dark" href="https://github.com/TheMoeEntity/">
           Moses Chukwudi Nwigberi
         </a>
