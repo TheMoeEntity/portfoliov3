@@ -132,7 +132,7 @@ const AboutPage = () => {
               fill
               style={{
                 objectFit: "cover",
-                transform: "rotate(10deg) translateX(-10px)",
+                transform: "rotate(10deg) translateX(-20px) translateY(20px)",
                 boxShadow:
                   "5px 9px 15px 0 rgba(0, 0, 0, 0.6), 2.5px -9px 35px 0 rgba(143, 143, 143, 0.2)",
               }}

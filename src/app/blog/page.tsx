@@ -3,6 +3,8 @@ const Blogs = dynamic(() => import("@/src/components/BlogPage"));
 import { Helpers } from "@/Helpers";
 import { blogPostType } from "@/Helpers/types";
 import { Metadata } from "next";
+import { Suspense } from "react";
+import Loading from "./loading";
 export const metadata: Metadata = {
     title: "MOE - Frontend Web Developer | Blog",
     description:
@@ -17,7 +19,9 @@ export const metadata: Metadata = {
 const Blog = async () => {
     const blog = (await Helpers.getData3()) as blogPostType[];
     return (
-        <Blogs blog={blog} />
+        <Suspense fallback={<Loading />}>
+            <Blogs blog={blog} />
+        </Suspense>
     )
 }
 

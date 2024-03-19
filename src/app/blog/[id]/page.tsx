@@ -3,6 +3,8 @@ import { blogPostType } from "@/Helpers/types";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
+import Loading from "../loading";
 const BlogSingle = dynamic(() => import("@/src/components/Blog"));
 
 export async function generateMetadata({
@@ -33,7 +35,9 @@ const Blog = async ({ params }: { params: { id: string } }) => {
         notFound();
     }
     return (
-        <BlogSingle single={single} />
+        <Suspense fallback={<Loading />}>
+            <BlogSingle single={single} />
+        </Suspense>
     )
 }
 
