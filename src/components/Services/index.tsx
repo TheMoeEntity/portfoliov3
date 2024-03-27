@@ -45,12 +45,13 @@ const Services = () => {
                 </span>
                 <ul>
                   <li>HTML/CSS</li>
+                  <li>Tailwind CSS/Bootstrap CSS</li>
                   <li>JavaScript</li>
                   <li>TypeScript</li>
                   <li>React</li>
                   <li>Next.js</li>
                   <li>Svelte.js</li>
-                  <li>Vue - Currently learning Vue.js {`:)`} </li>
+                  <li>Vue - Currently learning react-native and Vue.js {`:)`} </li>
                 </ul>
               </div>
             </div>
