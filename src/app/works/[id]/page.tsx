@@ -32,7 +32,11 @@ const Works = async ({ params }: { params: { id: string } }) => {
   if (!single) {
     notFound();
   }
-  return <WorksPage single={single} />;
+  return (
+    <main>
+      <WorksPage single={single} />;
+    </main>
+  )
 };
 
 export default Works;

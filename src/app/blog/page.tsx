@@ -20,7 +20,9 @@ const Blog = async () => {
     const blog = (await Helpers.getData3()) as blogPostType[];
     return (
         <Suspense fallback={<Loading />}>
-            <Blogs blog={blog} />
+            <main>
+                <Blogs blog={blog} />
+            </main>
         </Suspense>
     )
 }

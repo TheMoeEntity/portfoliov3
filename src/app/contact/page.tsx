@@ -12,7 +12,11 @@ export const metadata: Metadata = {
   applicationName: "Moe's Portfolio",
 };
 const page = () => {
-  return <ContactForm />;
+  return (
+    <main>
+      <ContactForm />
+    </main>
+  )
 };
 
 export default page;

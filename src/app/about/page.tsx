@@ -13,7 +13,11 @@ export const metadata: Metadata = {
 };
 
 const About = () => {
-  return <AboutPage />;
+  return (
+    <main>
+      <AboutPage />
+    </main>
+  )
 };
 
 export default About;

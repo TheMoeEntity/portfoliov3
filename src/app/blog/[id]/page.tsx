@@ -36,7 +36,9 @@ const Blog = async ({ params }: { params: { id: string } }) => {
     }
     return (
         <Suspense fallback={<Loading />}>
-            <BlogSingle single={single} />
+            <main>
+                <BlogSingle single={single} />
+            </main>
         </Suspense>
     )
 }
