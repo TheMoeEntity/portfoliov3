@@ -24,6 +24,7 @@ const Services = () => {
                   <li>PHP</li>
                   <li>Sanity CMS</li>
                   <li>Firebase</li>
+                  <li>Supabase</li>
                   <li>MongoDB </li>
                 </ul>
               </div>
