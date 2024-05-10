@@ -21,7 +21,13 @@ export default function NotFound() {
             }
 
           </div>
-          <Link href={`/`}>Go To Homepage</Link>
+          {
+            isBlogPost ? (
+              <Link href={`/blog`}>View blog posts</Link>
+            ) : (
+              <Link href={`/`}>Go To Homepage</Link>
+            )
+          }
         </div>
         <Script
           src="https://kit.fontawesome.com/4ef8c63dd7.js"
