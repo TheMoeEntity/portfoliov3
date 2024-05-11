@@ -207,6 +207,7 @@
   height: 100%;
   z-index: 99;
   left: 0;
+  transition: 0.9s ease;
   top: 0;
   background-color: rgba(0, 0, 0, 0.58);
 }

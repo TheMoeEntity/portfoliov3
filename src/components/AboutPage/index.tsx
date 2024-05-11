@@ -2,7 +2,7 @@
 import { useFullWidth } from "@/Helpers/hooks";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styles from "../../app/page.module.css";
 import profile from "../../../public/images/moe_profile.jpg";
 import profile3 from "../../../public/images/profile.jpg";
@@ -12,16 +12,19 @@ import TypeEffect from "../About/TypeEffect";
 const AboutPage = () => {
   const { anim } = useFullWidth(styles.fullWidth);
   const imageRef = useRef<null | HTMLImageElement>(null)
+  const [hoverState, setHoverState] = useState<'9999'|'-1'>('9999')
   const hover = () => {
     if (imageRef.current) {
       console.log(imageRef.current.style.zIndex)
       imageRef.current.style.zIndex = '-1'
+      setHoverState('-1')
     }
   }
   const hoverOut = () => {
     if (imageRef.current) {
       imageRef.current.style.zIndex = '9999'
-      
+      setHoverState('9999')
+
     }
   }
   return (
@@ -136,7 +139,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div onMouseEnter={() => hover()} onMouseLeave={() => hoverOut()}>
-            <div className={styles.overlay}></div>
+            <div style={{opacity: hoverState == '-1' ? '0':'1'}} className={styles.overlay}></div>
             <Image
               src={profile2}
               alt="Profile of Moses in a bar"
