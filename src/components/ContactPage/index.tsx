@@ -1,5 +1,5 @@
 "use client";
-import React, { ChangeEvent, useRef, useState } from "react";
+import React, { ChangeEvent, useEffect, useRef, useState } from "react";
 import styles from "./index.module.css";
 import { useResize } from "@/Helpers/hooks";
 import { Helpers } from "@/Helpers";
@@ -10,7 +10,11 @@ const ContactPage = () => {
     useResize();
   const { enqueueSnackbar } = useSnackbar();
   const [status, setStatus] = useState("Send Message");
+  const [option,setOption] = useState('')
 
+  useEffect(() => {
+    setOption(option)
+  }, [selectedOption])
   return (
     <div className={styles.about}>
       <h1 className={styles.title}>Contact Me</h1>
@@ -144,7 +148,7 @@ const ContactPage = () => {
                   val,
                   e,
                   enqueueSnackbar,
-                  selectedOption
+                  option
                 )
               }
             >

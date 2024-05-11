@@ -97,17 +97,17 @@ export class Helpers {
     };
 
     if (data.fullName.trim() === "") {
-      enqueueSnackbar("Full name cannot be empty", {
+      enqueueSnackbar("Full name cannot be empty :)", {
         variant: "error",
       });
       return;
     } else if (data.phone === "") {
-      enqueueSnackbar("Specify a phone number we can reach you with", {
+      enqueueSnackbar("Please specify a phone number I can reach you with", {
         variant: "error",
       });
       return;
     } else if (selectedOption === "--Choose--") {
-      enqueueSnackbar("Select a service from the options", {
+      enqueueSnackbar("Please select a service from the options", {
         variant: "error",
       });
       return;
@@ -116,7 +116,7 @@ export class Helpers {
       data.message.trim() === "" ||
       data.message.length < 10
     ) {
-      enqueueSnackbar("Message cannot be empty or short", {
+      enqueueSnackbar("Message cannot be empty or short :)", {
         variant: "error",
       });
       return;
