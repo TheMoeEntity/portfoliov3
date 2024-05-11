@@ -99,9 +99,9 @@ const Footer = () => {
         style={{ backgroundColor: "rgba(0, 0, 0, 0.01)" }}
       >
         © {new Date().getFullYear()} Copyright: &nbsp;
-        <a className="text-dark" href="https://github.com/TheMoeEntity/">
+        <b><a className="text-dark" href="https://github.com/TheMoeEntity/">
           Moses Chukwudi Nwigberi
-        </a>
+        </a></b>
       </div>
     </footer>
   );

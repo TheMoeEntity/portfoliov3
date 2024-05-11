@@ -52,7 +52,7 @@ const ContactPage = () => {
                     <a
                       target={`_blank`}
                       rel="noopener noreferrer"
-                      href="https://linkedin.com/in/moses.nwigberi"
+                      href="https://www.linkedin.com/in/nwigberi-moses/"
                     >
                       <i className="fa-brands fa-linkedin"></i>
                     </a>
