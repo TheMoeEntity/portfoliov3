@@ -36,7 +36,7 @@ const Works = ({ works }: { works: portfolioData[] }) => {
                 <div className={styles.details}>
                   <div>
                     <p>
-                      {x.details[0].split(/\s+/).slice(0, 20).join(" ") + "..."}
+                      {x.details[0].split(/\s+/).slice(0, 30).join(" ") + "..."}
                     </p>
                     <div className={styles.viewMore}>
                       <Link href={"/works/" + x.slug}>

@@ -57,15 +57,20 @@ const WorksPage = ({ single }: { single: portfolioData }) => {
                   </aside>
                 </div>
               </div>
-              <div className={styles.viewMore}>
-                <a
-                  target={`_blank`}
-                  rel="noopener noreferrer"
-                  href={single.url}
-                >
-                  <span>L I V E&nbsp; P R E V I E W</span>
-                </a>
-              </div>
+              {
+                single.url && (
+                  <div className={styles.viewMore}>
+                    <a
+                      target={`_blank`}
+                      rel="noopener noreferrer"
+                      href={single.url}
+                    >
+                      <span>L I V E&nbsp; P R E V I E W</span>
+                    </a>
+                  </div>
+                )
+              }
+
             </div>
           </div>
         </div>
